@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* Root */
+
+@font-face {
+  font-family: gilroy;
+  src: url(/fonts/gilroy-font.ttf);
+}
+@font-face {
+  font-family: gilroy-light;
+  src: url(/fonts/gilroy-light.ttf);
+}
+@font-face {
+  font-family: inter;
+  src: url(/fonts/inter-font.ttf);
+}
+body {
+  font-family: gilroy, sans-serif;
+  overflow-x: hidden;
+}
+
+.gilroy-light {
+  font-family: gilroy-light, sans-serif;
+}
+
+.inter {
+  font-family: inter, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Font-Sizes for Laptop */
+
+  --h1: 3.75rem; /*60px*/
+  --h2: 2.375rem; /*38px*/
+  --h3: 2rem; /*32px*/
+  --h4: 1.5rem; /*24px*/
+  --h5: 1.375rem; /*22px*/
+  --h6: 1.25rem; /*20px*/
+  --xl: 1.125rem; /*18px*/
+  --lg: 1rem; /*16px*/
+  --md: 0.875rem; /*14px*/
+  --sm: 0.75rem; /*12px*/
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* Font-Sizes for Mobile */
+    --h1: 2.375rem; /*38px*/
+    --h2: 2rem; /*32px*/
+    --h3: 1.625rem; /*26px*/
+    --h4: 1.5rem; /*24px*/
+    --h5: 1.25rem; /*20px*/
+    --h6: 1rem; /*16px*/
+    --xl: 1rem; /*18px*/
+    --lg: 1rem; /*16px*/
+    --md: 0.875rem; /*14px*/
+    --sm: 0.75rem; /*12px*/
+  }
+}
+
+@theme {
+  /* colors */
+  --color-primary: rgba(14, 83, 53, 1); /* #0E5335 */
+  --color-secondary-light: rgba(221, 244, 155, 1); /* #DDF49B */
+  --color-secondary-dark: rgba(34, 143, 83, 1); /* #228F53 */
+  --color-slate: rgba(26, 26, 26, 1); /* #1A1A1A */
+  --color-slate-light: rgba(72, 72, 72, 1); /* #484848 */
+  --color-hr-color: rgba(235, 235, 235, 1); /* #484848 */
+  --color-slate-lighter: rgba(118, 118, 118, 1); /* #767676 */
+  --color-grey: rgba(243, 243, 243, 1); /* #F3F3F3 */
+  --color-grey-light: rgba(247, 247, 247, 1); /* #F7F7F7 */
+  --color-grey-lighter: rgba(248, 248, 248, 1); /* #F8F8F8 */
+  --color-off-white-color: rgba(251, 249, 246, 1); /* #FBF9F6 */
+  --color-error: rgba(255, 32, 50, 1); /* #FF2032 */
+  --color-yellow-orange: rgba(248, 147, 46, 1); /* #F8932E */
+  --gradient-primary: linear-gradient(94deg, #bedd60 -22.91%, #228f53 80.24%);
+
+  /* Font-size */
+  --text-h1: var(--h1);
+  --text-h2: var(--h2);
+  --text-h3: var(--h3);
+  --text-h4: var(--h4);
+  --text-h5: var(--h5);
+  --text-h6: var(--h6);
+  --text-xl: var(--xl);
+  --text-lg: var(--lg);
+  --text-md: var(--md);
+  --text-sm: var(--sm);
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+.text-gradient-secondary {
+  background: linear-gradient(95deg, #bedd60 -97.99%, #228f53 80.7%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.max-w-section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.max-w-main {
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+/* Embla */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  will-change: transform;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}

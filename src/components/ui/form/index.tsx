@@ -4,7 +4,7 @@ import TextField from "../../shared/input-fields/text-field";
 import { Typography } from "../../shared/typography";
 import InputPassword from "../../shared/input-fields/input-password-field";
 import type { FormikProps } from "formik";
-import type { ContactUsFormValues } from "../../../types";
+import type { ContactUsFormValues, RemoveAccountFormValues } from "../../../types";
 import { ContactUsForm, RemoveAccountForm } from "../../../formik/forms";
 
 // types.ts or near your form component
@@ -15,6 +15,7 @@ interface FormProps {
   buttonText: string;
   isContactUs?: boolean;
   formik?: FormikProps<ContactUsFormValues>;
+  formikRemoveAccount?: FormikProps<RemoveAccountFormValues>;
 }
 
 const FormZera: FC<FormProps> = ({
@@ -23,6 +24,7 @@ const FormZera: FC<FormProps> = ({
   buttonText,
   formik,
   isContactUs,
+  formikRemoveAccount
 }) => {
   const {
     formFields: { firstname, lastName, email, message },
@@ -54,7 +56,7 @@ const FormZera: FC<FormProps> = ({
       {/* form */}
       <div className="sm:w-full w-[95%] lg:w-[90%] flex flex-row lg:flex-col items-start justify-start flex-wrap bg-white rounded-[16px] px-6 lg:px-10 pt-8 lg:pt-15 pb-6 lg:pb-10">
         <form
-          onSubmit={formik?.handleSubmit}
+          onSubmit={isContactUs?  formik?.handleSubmit : formikRemoveAccount?.handleSubmit}
           autoComplete="off"
           className="contact-form w-full"
         >
@@ -138,12 +140,12 @@ const FormZera: FC<FormProps> = ({
                 name={removeAccountEmail.name}
                 label={removeAccountEmail.label}
                 styling="w-full"
-                value={formik?.values.email}
-                onChange={formik?.handleChange}
-                onBlur={formik?.handleBlur}
+                value={formikRemoveAccount?.values.email}
+                onChange={formikRemoveAccount?.handleChange}
+                onBlur={formikRemoveAccount?.handleBlur}
                 error={
-                  formik?.touched.email && formik?.errors.email
-                    ? formik?.errors.email
+                  formikRemoveAccount?.touched.email && formikRemoveAccount?.errors.email
+                    ? formikRemoveAccount?.errors.email
                     : ""
                 }
               />
@@ -152,26 +154,26 @@ const FormZera: FC<FormProps> = ({
                 name={password.name}
                 label={password.label}
                 styling="w-full"
-                value={formik?.values?.password}
-                onChange={formik?.handleChange}
-                onBlur={formik?.handleBlur}
+                value={formikRemoveAccount?.values?.password}
+                onChange={formikRemoveAccount?.handleChange}
+                onBlur={formikRemoveAccount?.handleBlur}
                 error={
-                  formik?.touched.password && formik?.errors.password
-                    ? formik?.errors.password
+                  formikRemoveAccount?.touched.password && formikRemoveAccount?.errors.password
+                    ? formikRemoveAccount?.errors.password
                     : ""
                 }
               />
               <TextField
-                onChange={formik?.handleChange}
-                onBlur={formik?.handleBlur}
+                onChange={formikRemoveAccount?.handleChange}
+                onBlur={formikRemoveAccount?.handleBlur}
                 name={removeAccountMessage.name}
                 label={removeAccountMessage.label}
                 styling="w-full"
                 rows={5}
-                value={formik?.values.message}
+                value={formikRemoveAccount?.values.message}
                 error={
-                  formik?.touched.message && formik?.errors.message
-                    ? formik?.errors.message
+                  formikRemoveAccount?.touched.message && formikRemoveAccount?.errors.message
+                    ? formikRemoveAccount?.errors.message
                     : ""
                 }
               />

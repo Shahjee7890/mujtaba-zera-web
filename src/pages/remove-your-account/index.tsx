@@ -2,26 +2,23 @@ import FormZera from "../../components/ui/form";
 import { useFormik } from "formik";
 import { removeAccountValidations } from "../../formik/validation";
 import { toast } from "react-toastify";
+import type { RemoveAccountFormValues } from "../../types";
 
 const RemoveAccount = () => {
-  const formik = useFormik({
-    initialValues: {
-      email: "",
-      message: "",
-      password: "",
-      firstName: "",
-      lastName: "",
-    },
-    validationSchema: removeAccountValidations,
+  const formik = useFormik<RemoveAccountFormValues>({
+  initialValues: {
+    email: "",
+    message: "",
+    password: "",
+  },
+  validationSchema: removeAccountValidations,
+  onSubmit: (values) => {
+    console.log(values);
+    toast.info("Coming soon!");
+    resetForm();
+  },
+});
 
-    onSubmit: (values) => {
-      // handle form submission here
-      console.log(values);
-      toast.info("Coming soon!");
-
-      resetForm();
-    },
-  });
   const { resetForm } = formik;
 
   return (
@@ -30,7 +27,7 @@ const RemoveAccount = () => {
         title="Remove Your Account."
         description="Provide the details to remove your Zera account"
         buttonText="Request"
-        formik={formik}
+        formikRemoveAccount={formik}
       />
     </div>
   );

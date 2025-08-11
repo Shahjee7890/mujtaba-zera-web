@@ -1,4 +1,3 @@
-
 import { useFormik } from "formik";
 import FormZera from "../../../ui/form";
 import { contactUsValidations } from "../../../../formik/validation";
@@ -20,7 +19,7 @@ const ContactUs = () => {
 
   const {resetForm} = formik
   return (
-    <div className=" w-[100%] md:w-[97%] flex flex-col py-6">
+    <section id="contact" className="w-full flex flex-col py-6 lg:pb-25">
       <FormZera
         isContactUs
         title="Contact Us For A Free Consultation"
@@ -28,7 +27,7 @@ const ContactUs = () => {
         buttonText="Submit"
         formik={formik}
       />
-    </div>
+    </section>
   );
 };
 

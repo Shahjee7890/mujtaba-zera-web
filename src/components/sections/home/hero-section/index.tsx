@@ -4,14 +4,15 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="w-full pt-10 sm:pt-0 py-5 sm:py-24 md:py-10 xl:py-20 flex items-center justify-center"
+      className="w-full pt-10 py-5 sm:py-12 md:py-10 xl:py-25 flex items-center justify-center"
     >
       {/* child */}
-      <div className="max-w-section flex flex-col lg:flex-row w-4/5 items-center justify-between gap-10">
-        <div className="w-full lg:w-[85%] flex flex-col gap-6 text-center lg:text-left">
+      <div className="max-w-section flex justify-center items-center">
+      <div className="max-w-content flex flex-col lg:flex-row items-center justify-between gap-10 w-4/5 lg:w-[90%] xl:w-full">
+        <div className="w-full lg:w-[70%] xl:w-[40%] flex flex-col justify-center gap-6 text-center lg:text-left">
           {/* Heading */}
           <div className="relative">
-            <div className="absolute inset-0 right-0 bottom-0 left-30 top-40 sm:left-40 md:left-70 md:top-60 lg:left-65 lg:top-17 flex items-center justify-center w-[120px] h-[153px]">
+            <div className="absolute inset-0 right-0 bottom-0 left-30 top-40 sm:left-40 md:left-70 md:top-50 lg:left-35 lg:top-33 xl:left-88 xl:top-8 flex items-center justify-center w-[120px] h-[153px]">
               <img
                 loading="lazy"
                 src="/assets/images/hero-bg.webp"
@@ -58,6 +59,7 @@ const HeroSection = () => {
             alt="Hero Banner"
             className="w-full"
           />
+        </div>
         </div>
       </div>
     </section>

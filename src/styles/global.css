@@ -111,6 +111,11 @@ html {
   margin: 0 auto;
 }
 
+.max-w-content{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
 /* Embla */
 
 .embla {

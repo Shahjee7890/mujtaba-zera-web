@@ -23,7 +23,6 @@ const AccordionItem = ({
         />
       </>
     )}
-    className="border-b border-[#F3F3F3]"
     buttonProps={{
       className: ({ isEnter }) =>
         `flex w-full px-4 text-left items-center cursor-pointer  ${
@@ -32,7 +31,7 @@ const AccordionItem = ({
     }}
     contentProps={{
       className:
-        "transition-height duration-200 ease-out text-[#484848] font-[14px] text-sm inter",
+        "transition-height duration-300 ease-out text-[#484848] font-[14px] text-sm inter",
     }}
     panelProps={{
       className: ({ isEnter }) => `px-4  ${isEnter ? "pt-1 pb-4" : "py-4"}`,

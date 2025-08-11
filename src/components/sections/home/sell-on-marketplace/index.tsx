@@ -10,8 +10,9 @@ const SellOnMarketplace = () => {
       className="w-full flex flex-col text-center items-center justify-center px-5 lg:px-0 py-6 sm:py-24 md:py-10 xl:py-20 bg-off-white-color"
     >
       {/* child */}
-      <div className="gap-5 lg:gap-10 flex flex-col">
+      <div className="max-w-section justify-center items-center">
         {/* content */}
+        <div className="max-w-content flex flex-col gap-5 lg:gap-10">
         <div className="flex flex-col flex-wrap">
           {/* heading */}
           <div>
@@ -31,7 +32,7 @@ const SellOnMarketplace = () => {
           </div>
         </div>
         {/* image */}
-        <div className="w-fit">
+        <div className="w-full flex px-9 xl:px-0">
           <img
             loading="lazy"
             src="/assets/images/sell-bunner.webp"
@@ -43,6 +44,7 @@ const SellOnMarketplace = () => {
         </div>
         <div>
           <UserReviews />
+        </div>
         </div>
       </div>
       {/* cards parent */}

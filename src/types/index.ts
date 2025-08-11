@@ -40,6 +40,7 @@ export interface ContactUsFormValues {
   message: string;
   password?: string;
 }
+
 export interface RemoveAccountFormValues {
   email: string;
   message: string;

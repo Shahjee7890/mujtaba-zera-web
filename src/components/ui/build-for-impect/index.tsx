@@ -27,7 +27,7 @@ const BuildForImpact = () => {
         </div>
         <hr className="text-hr-color" />
         {/* count */}
-        <div className="flex flex-col md:flex-row md:px-4 items-center text-center justify-between gap-5 md:gap-8">
+        <div className="flex flex-col md:flex-row md:px-10 items-center text-center justify-between gap-5 md:gap-8">
           <div>
             <Typography size="h1" as="h1" className="text-black">
               {counterOn ? (

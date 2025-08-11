@@ -16,7 +16,7 @@ const OurCategories = () => {
   return (
     <section
       id="categories"
-      className="w-full flex flex-col justify-center items-center px-5 pt-8 sm:py-15 md:py-10 xl:py-20"
+      className="w-full flex flex-col justify-center items-center px-5 pt-8 sm:py-15 md:py-10 xl:py-30"
     >
       {/* child */}
       <div className="max-w-section w-full flex flex-col justify-center items-center gap-1">

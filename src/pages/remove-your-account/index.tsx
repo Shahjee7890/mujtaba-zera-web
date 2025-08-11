@@ -22,14 +22,14 @@ const RemoveAccount = () => {
   const { resetForm } = formik;
 
   return (
-    <div className="w-full px-5 lg:px-0 py-10 md:py-15 flex justify-center">
+    <section className="w-full px-5 lg:px-0 py-10 md:py-15 flex justify-center">
       <FormZera
         title="Remove Your Account."
         description="Provide the details to remove your Zera account"
         buttonText="Request"
         formikRemoveAccount={formik}
       />
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,6 @@
+import React, { type FC } from "react";
 import { Typography } from "../../typography";
 import type { InputProps } from "../../../../types";
-import type { FC } from "react";
 
 const InputField: FC<InputProps> = ({
   onChange,

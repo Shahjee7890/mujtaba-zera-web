@@ -1,6 +1,6 @@
-import { type FC } from "react";
 import { Typography } from "../../typography";
 import type { TextFieldProps } from "../../../../types";
+import type { FC } from "react";
 
 const TextField: FC<TextFieldProps> = ({
   onChange,

@@ -2,12 +2,13 @@ import { featurePoint } from "../../../../data";
 import { Typography } from "../../../shared/typography";
 
 const BuyOnMarketplace = () => {
+  
   return (
-    <section className="w-full bg-gradient-primary flex items-center justify-end py-10 lg:py-30">
-      <div className="max-w-section flex flex-col gap-10 lg:gap-0 lg:flex-row items-center justify-center">
-        {/* content */}
-        <div className="w-full lg:w-[50%] flex sm:justify-end px-2 sm:px-0">
-          <div className="text-white flex flex-col flex-wrap gap-10 px-4 w-full sm:w-[87%]">
+    <section className="w-full flex flex-col gap-10 lg:gap-0 items-center justify-center lg:flex-row bg-gradient-primary py-10 lg:py-30 overflow-hidden">
+      <div className="max-w-section">
+      
+        {/* content */} 
+          <div className="text-white flex flex-col flex-wrap gap-10 px-12 lg:px-7 w-full max-w-[572px]">
             {/* heading and description */}
             <div>
               <Typography size="h2" as="h2">Buying on Zera Marketplace</Typography>
@@ -17,10 +18,10 @@ const BuyOnMarketplace = () => {
                 items from your local neighbourhood.
               </Typography>
             </div>
-            <div>
+            <div className="flex flex-col px-2">
               <Typography size="h5" as="h5">Features</Typography>
               {featurePoint?.map((point) => (
-                <ol key={point.id} className="list-disc px-6">
+                <ol key={point.id} className="list-disc px-4">
                   <li >
                     <Typography size="lg" className="text-white inter">
                       {point?.label}
@@ -29,17 +30,16 @@ const BuyOnMarketplace = () => {
                 </ol>
               ))}
             </div>
-          </div>
         </div>
         {/* images */}
-        <div className="w-full lg:w-[50%]">
+      </div>
+        <div className="w-full max-w-[500px] xl:max-w-[700px]">
           <img
             loading="lazy"
             src="/assets/images/buying-banner.webp"
             alt="Marketplace product display"
           />
         </div>
-      </div>
     </section>
   );
 };

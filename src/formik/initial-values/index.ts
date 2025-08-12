@@ -4,3 +4,12 @@ export const contactUsValues = {
   email: "",
   message: "",
 };
+
+export const removeAccountValues = {
+  email: "",
+  message: "",
+  password: "",
+};
+export const subscribeNewsvalues = {
+  email: "",
+};

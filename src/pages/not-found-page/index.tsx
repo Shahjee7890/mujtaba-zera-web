@@ -7,7 +7,7 @@ const NotFound = () => {
     <>
       <Header />
       <main className="flex flex-col items-center max-w-main">
-        <section className="flex flex-col-reverse md:flex-col lg:flex-row items-center w-[80%] pt-10 lg:pt-10 pb-20 gap-10">
+        <section className="flex flex-col-reverse md:flex-col lg:flex-row items-center w-[100%] px-5 md:px-14 lg:px-20 pt-10 lg:pt-10 pb-20 gap-10">
           {/* content and button */}
           <div className="flex flex-col gap-5 lg:gap-10 items-start w-full lg:w-[40]">
             <Typography

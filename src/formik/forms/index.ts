@@ -65,3 +65,17 @@ export const RemoveAccountForm = {
     },
   },
 };
+export const subscribeEmailInput = {
+  id: "03-subscribe-news-letter",
+  formFields: {
+    email: {
+      type: "email",
+      name: "email",
+      label: "Email",
+      errMsgs: {
+        required: "Email Address is required.",
+        inValid: "Email must be valid.",
+      },
+    },
+  },
+};

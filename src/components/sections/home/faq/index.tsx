@@ -8,7 +8,7 @@ const Faqs = () => {
     <section id="faqs" className="w-full pb-5 lg:pb-0 pt-10">
       {/* child */}
       <div className="max-w-section">
-        <div className="max-w-content w-full flex flex-col lg:flex-row lg:justify-between gap-10 px-5 lg:px-0">
+        <div className="max-w-content w-full flex flex-col lg:flex-row lg:justify-between gap-10 px-1 lg:px-0">
           {/* title */}
           <div className="w-full lg:leading-12 px-4 lg:px-6 xl:px-0 ">
             <Typography size="h2" as="h2">

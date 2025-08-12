@@ -6,7 +6,7 @@ import SideBar from "../../shared/side-bar";
 import { toast } from "react-toastify";
 
 const Header = () => {
-     const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
@@ -29,13 +29,13 @@ const Header = () => {
 
   const [showMenu, setShowMenu] = useState(false);
 
-  const handleDownload =()=>{
-    toast.info('Coming soon!')
-  }
+  const handleDownload = () => {
+    toast.info("Coming soon!");
+  };
 
   return (
     <>
-      <header className="w-full flex flex-col justify-center items-center px-3 lg:px-3 xl:px-0 pt-2">
+      <header className="w-full flex flex-col justify-center items-center px-4 lg:px-3 pt-2">
         <div className="max-w-section flex items-center justify-between px-6 py-4 bg-gradient-primary w-full rounded-[20px] border-b-secondary-light border-b-8">
           {/* logo */}
           <div className="w-[20%] sm:w-[15%] md:w-[17%] lg:w-[18%] xl:w-[10%] cursor-pointer">
@@ -85,7 +85,7 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}
+      <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />
     </>
   );
 };

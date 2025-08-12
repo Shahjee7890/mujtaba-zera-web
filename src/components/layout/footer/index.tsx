@@ -45,7 +45,9 @@ const Footer = () => {
                   key={icon.id}
                   className="cursor-pointer bg-secondary-light p-2 rounded-[9px] flex items-center justify-center w-[40px] h-[40px]"
                 >
-                  <img src={icon.src} alt={icon.alt} className="w-4 h-4" />
+                  <a href="/">
+                    <img src={icon.src} alt={icon.alt} className="w-4 h-4" />
+                  </a>
                 </div>
               ))}
             </div>

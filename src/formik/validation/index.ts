@@ -1,5 +1,9 @@
 import * as yup from "yup";
-import { ContactUsForm, RemoveAccountForm } from "../forms";
+import {
+  ContactUsForm,
+  RemoveAccountForm,
+  subscribeEmailInput,
+} from "../forms";
 
 // const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const emailRegex =
@@ -38,4 +42,16 @@ export const removeAccountValidations = yup.object({
     .lowercase()
     .matches(emailRegex, { message: removeAccountEmail.errMsgs.inValid })
     .required(removeAccountEmail.errMsgs.required),
+});
+
+const {
+  formFields: { email:subscribeEmail },
+} = subscribeEmailInput;
+export const subscribeNewsValidations = yup.object({
+  email: yup
+    .string()
+    .trim()
+    .lowercase()
+    .matches(emailRegex, { message: subscribeEmail.errMsgs.inValid })
+    .required(subscribeEmail.errMsgs.required),
 });

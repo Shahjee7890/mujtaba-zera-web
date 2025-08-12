@@ -3,14 +3,11 @@ import { useFormik } from "formik";
 import { removeAccountValidations } from "../../formik/validation";
 import { toast } from "react-toastify";
 import type { RemoveAccountFormValues } from "../../types";
+import { removeAccountValues } from "../../formik/initial-values";
 
 const RemoveAccount = () => {
   const formik = useFormik<RemoveAccountFormValues>({
-  initialValues: {
-    email: "",
-    message: "",
-    password: "",
-  },
+  initialValues: removeAccountValues,
   validationSchema: removeAccountValidations,
   onSubmit: (values) => {
     console.log(values);

@@ -1,4 +1,3 @@
-
 import BuyOnMarketplace from "../../components/sections/home/buy-on-marketplace";
 import ContactUs from "../../components/sections/home/contact-us";
 import Faqs from "../../components/sections/home/faq";
@@ -9,8 +8,6 @@ import SubscribeNewsLetter from "../../components/sections/home/subscribe";
 import WhyChooseUs from "../../components/sections/home/why-choose-us";
 
 const Home = () => {
- 
-  
   return (
     <>
       <HeroSection />
@@ -20,7 +17,7 @@ const Home = () => {
       <SellOnMarketplace />
       <Faqs />
       <ContactUs />
-      <SubscribeNewsLetter styling={"w-full md:w-[510px]"} />
+      <SubscribeNewsLetter email="" styling={"w-full md:w-[510px]"} />
     </>
   );
 };

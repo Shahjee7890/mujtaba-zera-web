@@ -18,11 +18,16 @@ const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
   ];
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, []);
+  }, [showMenu]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,9 +45,8 @@ const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
     <>
       {/* Sidebar */}
       <div
-        className={`flex flex-col pt-3 pb-10 justify-start items-center text-center fixed top-0 right-0 h-full w-[70%] bg-gradient-primary z-50 shadow-2xl transform transition-transform duration-300 ease-in-out ${
-          showMenu ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`flex flex-col pt-3 pb-10 justify-start items-center text-center fixed top-0 right-0 h-full w-[70%] bg-gradient-primary z-50 shadow-2xl transform transition-transform duration-500 ease-in-out
+  ${showMenu ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="relative w-full flex flex-col px-8 py-4 ">
           <div className="flex justify-start items-center">
@@ -86,12 +90,11 @@ const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
       </div>
 
       {/* Backdrop */}
-      {showMenu && (
-        <div
-          onClick={() => setShowMenu(false)}
-          className="fixed inset-0 bg-transparent bg-opacity-30 z-40 backdrop-blur-sm"
-        />
-      )}
+      <div
+        onClick={() => setShowMenu(false)}
+        className={`fixed inset-0 bg-black/50 z-40 backdrop-blur-sm transition-opacity duration-300 ease-in-out
+  ${showMenu ? "opacity-100 visible" : "opacity-0 invisible"}`}
+      />
     </>
   );
 };

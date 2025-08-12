@@ -1,4 +1,4 @@
-import React, { type FC } from "react";
+import { type FC } from "react";
 import { Typography } from "../../typography";
 import type { InputProps } from "../../../../types";
 

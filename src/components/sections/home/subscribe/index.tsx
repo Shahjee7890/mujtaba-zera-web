@@ -60,7 +60,7 @@ const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
               </button>
             </div>
             <div className="sm:block hidden">
-              <p className="text-red-600 font-light h-2.5 text-sm px-7 inter">
+              <p className="text-red-600 font-light h-2.5 text-sm px-2 pt-2 inter">
                 {errors.email}
               </p>
             </div>
@@ -75,7 +75,7 @@ const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
             </Typography>
           </button>
           <div className="sm:hidden block">
-            <p className="text-red-600 font-light h-2.5 text-sm px-7 inter">
+            <p className="text-red-600 font-light h-2.5 text-sm px-2 pt-2 inter">
               {errors.email}
             </p>
           </div>

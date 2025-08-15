@@ -3,23 +3,12 @@ import InputField from "../../shared/input-fields/input-text-field";
 import TextField from "../../shared/input-fields/text-field";
 import { Typography } from "../../shared/typography";
 import InputPassword from "../../shared/input-fields/input-password-field";
-import type { FormikProps } from "formik";
-import type {
-  ContactUsFormValues,
-  RemoveAccountFormValues,
-} from "../../../types";
 import { ContactUsForm, RemoveAccountForm } from "../../../formik/forms";
+import type { FormProps } from "../../../types";
+
 
 // types.ts or near your form component
 
-interface FormProps {
-  title: string;
-  description: string;
-  buttonText: string;
-  isContactUs?: boolean;
-  formik?: FormikProps<ContactUsFormValues>;
-  formikRemoveAccount?: FormikProps<RemoveAccountFormValues>;
-}
 
 const FormZera: FC<FormProps> = ({
   title,
@@ -134,7 +123,7 @@ const FormZera: FC<FormProps> = ({
                 <div className="flex items-center justify-center mt-4">
                   <button
                     type="submit"
-                    className="bg-gradient-primary py-4 px-20 lg:px-22 rounded-full cursor-pointer"
+                    className="bg-gradient-primary py-4 px-20 lg:px-22 rounded-full cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"
                   >
                     <Typography size="lg" className="text-white font-medium">
                       {buttonText}
@@ -194,7 +183,10 @@ const FormZera: FC<FormProps> = ({
                     type="submit"
                     className="bg-gradient-primary py-4 px-20 lg:px-22 rounded-full cursor-pointer"
                   >
-                    <Typography size="lg" className="text-white font-medium">
+                    <Typography
+                      size="lg"
+                      className="text-white font-medium transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"
+                    >
                       {buttonText}
                     </Typography>
                   </button>

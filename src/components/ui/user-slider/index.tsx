@@ -3,7 +3,7 @@ import { Typography } from "../../shared/typography";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-const UserSwiper = () => {
+const UserSlider = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 2000, stopOnInteraction: false }),
   ]);
@@ -19,9 +19,9 @@ const UserSwiper = () => {
             return (
               <div
                 key={index}
-                className="flex-shrink-0 min-w-[300px] max-w-[380px] bg-white rounded-[25px] flex flex-col gap-8 px-15 sm:px-10 py-12 text-start"
+                className="sm:flex-shrink-0 min-w-full sm:min-w-[300px] max-w-[380px] bg-white rounded-[25px] flex flex-col gap-8 px-10 pt-10 pb-8 sm:py-12 text-start"
               >
-                <div className="flex items-center justify-cestartnter gap-8">
+                <div className="flex items-center justify-center gap-8">
                   <div>
                     <img src={profile} alt="user" />
                   </div>
@@ -44,4 +44,4 @@ const UserSwiper = () => {
   );
 };
 
-export default UserSwiper;
+export default UserSlider;

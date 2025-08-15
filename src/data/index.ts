@@ -81,6 +81,22 @@ export const userCards = [
     description:
       "I’ve always loved making handmade crafts but didn’t know how to start selling. Zera gave me that platform. I listed my products, received genuine inquiries, and now I even get repeat customers. It’s simple, supportive, and perfect for small creators like me.",
   },
+  {
+    id: 7,
+    profile: "/assets/images/user-7.webp",
+    title: "Bowie Colson",
+    rating: "/assets/images/user-rating.webp",
+    description:
+      "Zera has made my photography business so much easier to manage. I can showcase my portfolio, handle bookings, and get paid all in one place. The app keeps everything professional and stress-free — my clients love it too!",
+  },
+  {
+    id: 8,
+    profile: "/assets/images/user-8.webp",
+    title: "Leif Koa",
+    rating: "/assets/images/user-rating.webp",
+    description:
+      "Before Zera, finding reliable gigs for my tutoring services was a struggle. Now, students can find me instantly, book sessions, and even leave reviews that help me grow my reputation. It’s like my business is running on autopilot.",
+  },
 ];
 export const faqQuestions = [
   {

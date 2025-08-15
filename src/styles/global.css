@@ -70,6 +70,7 @@ html {
   --color-slate: rgba(26, 26, 26, 1); /* #1A1A1A */
   --color-slate-light: rgba(72, 72, 72, 1); /* #484848 */
   --color-hr-color: rgba(235, 235, 235, 1); /* #484848 */
+  --color-hover-color: rgba(200, 200, 200, 1); /* #C8C8C8 */
   --color-slate-lighter: rgba(118, 118, 118, 1); /* #767676 */
   --color-grey: rgba(243, 243, 243, 1); /* #F3F3F3 */
   --color-grey-light: rgba(247, 247, 247, 1); /* #F7F7F7 */
@@ -115,7 +116,17 @@ html {
   max-width: 1180px;
   margin: 0 auto;
 }
-/* Embla */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* --------- Embla --------- */
 
 .embla {
   overflow: hidden;
@@ -135,10 +146,3 @@ html {
   flex: 0 0 auto;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
-  transition: background-color 5000s ease-in-out 0s;
-}

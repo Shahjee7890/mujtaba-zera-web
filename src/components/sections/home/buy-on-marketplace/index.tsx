@@ -1,9 +1,20 @@
+import { useEffect } from "react";
 import { featurePoint } from "../../../../data";
 import { Typography } from "../../../shared/typography";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const BuyOnMarketplace = () => {
+  // ---animation-----
+  useEffect(() => {
+    Aos.init({});
+  }, []);
   return (
-    <section className="w-full flex flex-col gap-10 lg:gap-0 items-center justify-center lg:flex-row bg-gradient-primary py-10 lg:py-30 overflow-hidden">
+    <section
+      className="w-full flex flex-col gap-10 lg:gap-0 items-center justify-center lg:flex-row bg-gradient-primary py-10 lg:py-30 overflow-hidden"
+      data-aos="zoom-in-up"
+      data-aos-duration="3000"
+    >
       <div className="max-w-section">
         {/* content */}
         <div className="text-white flex flex-col flex-wrap gap-10 px-5 xl:px-0 w-full max-w-[572px]">

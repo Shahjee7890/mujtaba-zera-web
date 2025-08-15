@@ -3,23 +3,34 @@ import FormZera from "../../../ui/form";
 import { contactUsValidations } from "../../../../formik/validation";
 import { contactUsValues } from "../../../../formik/initial-values";
 import { toast } from "react-toastify";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
   const formik = useFormik({
-    initialValues:  contactUsValues ,
+    initialValues: contactUsValues,
     validationSchema: contactUsValidations,
 
     onSubmit: (values) => {
       console.log(values);
-      toast.info("Coming soon!")
-      resetForm()
-
+      toast.info("Coming soon!");
+      resetForm();
     },
   });
+  // ---animation-----
+  useEffect(() => {
+    Aos.init({});
+  }, []);
 
-  const {resetForm} = formik
+  const { resetForm } = formik;
   return (
-    <section id="contact" className="w-full flex flex-col py-6 lg:pb-25">
+    <section
+      id="contact"
+      className="w-full flex flex-col py-6 lg:pb-25"
+      data-aos="zoom-in-up"
+      data-aos-duration="3000"
+    >
       <FormZera
         isContactUs
         title="Contact Us For A Free Consultation"

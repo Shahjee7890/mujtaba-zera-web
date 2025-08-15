@@ -16,20 +16,23 @@ const BuildForImpact = () => {
   }, [isInView]);
 
   return (
-    <section ref={ref}>
-      <div className="flex flex-col gap-6 lg:gap-12">
+    <section ref={ref} className="w-full">
+      <div className="w-full flex flex-col gap-6 lg:gap-12">
         {/* heading */}
-        <div>
+        <div className="max-w-content">
           <Typography size="h2" as="h2" className="flex gap-2 items-center justify-center">
             <span  className="gilroy-light"> Built for</span>
             <span className="text-gradient-secondary">Impact</span>
           </Typography>
         </div>
-        <hr className="text-hr-color" />
+        <div className="w-full">
+        <hr className="text-hr-color w-full" />
+        </div>
         {/* count */}
-        <div className="flex flex-col md:flex-row md:px-10 items-center text-center justify-between gap-5 md:gap-8">
+      <div className="max-w-section">
+          <div className="w-full flex flex-col md:flex-row md:px-10 items-center text-center justify-between gap-5 md:gap-20 lg:gap-50">
           <div>
-            <Typography size="h1" as="h1" className="text-black">
+            <Typography size="h5" as="p" className="text-black !text-[40px] md:!text-[45px] xl:!text-[60px]">
               {counterOn ? (
                 <CountUp
                   start={0}
@@ -48,7 +51,7 @@ const BuildForImpact = () => {
           </div>
 
           <div>
-            <Typography size="h1" as="h1" className="text-black">
+            <Typography size="h5" as="p" className="text-black !text-[40px] md:!text-[45px] xl:!text-[60px]">
               {counterOn ? (
                 <CountUp
                   start={0}
@@ -67,7 +70,7 @@ const BuildForImpact = () => {
           </div>
 
           <div>
-            <Typography size="h1" as="h1" className="text-black">
+            <Typography size="h5" as="p" className="text-black !text-[40px] md:!text-[45px] xl:!text-[60px]">
               4.9
             </Typography>
             <Typography size="h6" className="inter text-slate-lighter">
@@ -75,7 +78,8 @@ const BuildForImpact = () => {
             </Typography>
           </div>
         </div>
-        <hr className="text-hr-color" />
+      </div>
+        <hr className="text-hr-color w-full" />
       </div>
     </section>
   );

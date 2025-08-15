@@ -29,7 +29,7 @@ const InputField: FC<InputProps> = ({
         />
         <label
           htmlFor="floating_email"
-          className="text-lg font-medium z-50 inter peer-focus:font-medium absolute text-md text-[#C8C8C8] dark:text-[#C8C8C8] duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-black peer-focus:dark:text-[#C8C8C8] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+          className="text-lg font-medium z-50 inter peer-focus:font-medium absolute text-md text-hover-color dark:text-hover-color duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-black peer-focus:dark:text-hover-color peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
         >
           {label}
         </label>

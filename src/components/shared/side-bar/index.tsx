@@ -1,12 +1,9 @@
-import { useEffect, type Dispatch, type SetStateAction } from "react";
+import { useEffect} from "react";
 import { Typography } from "../../shared/typography";
 import { MdCancel } from "react-icons/md";
+import type { SideBarProps } from "../../../types";
 
 // ✅ Define props type
-interface SideBarProps {
-  showMenu: boolean;
-  setShowMenu: Dispatch<SetStateAction<boolean>>;
-}
 
 const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
   const headerMenuOptions = [
@@ -25,7 +22,7 @@ const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset"; 
     };
   }, [showMenu]);
 
@@ -82,8 +79,8 @@ const SideBar = ({ showMenu, setShowMenu }: SideBarProps) => {
           </ul>
         </div>
 
-        <div>
-          <button className="w-full bg-secondary-light text-[#228F53] py-2 px-6 rounded-full ">
+        <div className="py-10">
+          <button className="w-full bg-secondary-light text-secondary-dark py-2 px-6 rounded-full ">
             <Typography size="lg">Download App</Typography>
           </button>
         </div>

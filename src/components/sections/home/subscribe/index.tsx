@@ -5,11 +5,9 @@ import { toast } from "react-toastify";
 import { subscribeNewsvalues } from "../../../../formik/initial-values";
 import { subscribeEmailInput } from "../../../../formik/forms";
 import { subscribeNewsValidations } from "../../../../formik/validation";
+import type { SubscribProps } from "../../../../types";
 
-interface SubscribProps {
-  styling?: string;
-  email: string;
-}
+
 
 const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
   const {
@@ -24,10 +22,9 @@ const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
     },
   });
   const { values, errors, handleChange, handleBlur, handleSubmit } = formik;
-  console.log(errors);
 
   return (
-    <section className="bg-[url('/assets/images/shape.webp')] bg-cover bg-center h-[170px] sm:h-[190px] md:h-[210px] xl:h-[250px] w-full pb-4 pt-10 sm:pt-10 md:pt-15 lg:pt-25">
+    <section className="bg-[url('/assets/images/shape.webp')] bg-cover bg-center h-[170px] sm:h-[190px] md:h-[210px] xl:h-[250px] w-full pb-4 pt-10 sm:pt-10 md:pt-15 lg:pt-25 mb-18 sm:mb-0">
       <div className="max-w-section px-5 xl:px-0">
         <form
           onSubmit={handleSubmit}
@@ -51,10 +48,15 @@ const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
                 onChange={handleChange}
                 value={values.email}
                 placeholder="Enter your email"
-                className={`inter outline-0 border-0 placeholder-[rgba(43,61,81,0.5)] text-black ${styling}`}
+                className={`inter outline-0 border-0 placeholder-[rgba(43,61,81,0.5)] sm:pr-5 text-black ${styling}`}
               />
-              <button className="sm:block hidden bg-gradient-primary px-2 py-4 sm:px-7 lg:py-4 lg:px-10 rounded-full cursor-pointer">
-                <Typography size="lg" className="text-white whitespace-nowrap">
+              <button
+                className="sm:block hidden bg-gradient-primary px-2 py-4 sm:px-7 lg:py-4 lg:px-10 rounded-full cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"
+              >
+                <Typography
+                  size="lg"
+                  className="text-white whitespace-nowrap transition-colors duration-300 ease-in-out hover:text-white"
+                >
                   Subscribe Now
                 </Typography>
               </button>
@@ -74,8 +76,8 @@ const SubscribeNewsLetter: FC<SubscribProps> = ({ styling }) => {
               Subscribe Now
             </Typography>
           </button>
-          <div className="sm:hidden block">
-            <p className="text-red-600 font-light h-2.5 text-sm px-2 pt-2 inter">
+          <div className="sm:hidden flex justify-start w-full">
+            <p className="text-red-600 font-light h-2.5 text-sm text-left px-2 pb-2 inter">
               {errors.email}
             </p>
           </div>

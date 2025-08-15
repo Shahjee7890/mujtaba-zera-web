@@ -26,12 +26,12 @@ const AccordionItem = ({
     buttonProps={{
       className: ({ isEnter }) =>
         `flex w-full px-4 text-left items-center cursor-pointer  ${
-          isEnter ? "text-[#228F53] pb-1 pt-4" : "py-4"
+          isEnter ? "text-secondary-dark pb-1 pt-4" : "py-4"
         }`,
     }}
     contentProps={{
       className:
-        "transition-height duration-300 ease-out text-[#484848] font-[14px] text-sm inter",
+        "transition-height duration-300 ease-out text-slate-light font-[14px] text-sm inter",
     }}
     panelProps={{
       className: ({ isEnter }) => `px-4  ${isEnter ? "pt-1 pb-4" : "py-4"}`,

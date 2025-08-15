@@ -49,14 +49,14 @@ const Header = () => {
           </div>
 
           {/* desktop menu */}
-          <div className="hidden md:flex items-center justify-between inter">
+          <div className="hidden lg:flex items-center justify-between inter">
             <ul className="flex items-center justify-center gap-9 md:gap-5 lg:gap-9 2xl:gap-10">
               {headerMenuOptions?.map((option) => (
                 <a href={option.link} key={option.id}>
                   <li className="cursor-pointer">
                     <Typography
                       size="lg"
-                      className="text-white font-semibold hover:text-secondary-light"
+                      className="text-white font-semibold transition-all duration-300 ease-in-out hover:text-secondary-light hover:-translate-y-0.5"
                     >
                       {option?.label}
                     </Typography>
@@ -69,14 +69,14 @@ const Header = () => {
           <button onClick={handleDownload}>
             <Typography
               size="lg"
-              className="hidden md:flex font-bold bg-secondary-light text-secondary-dark py-2 px-4 md:py-2 md:px-4 lg:py-3 lg:px-8 rounded-[26px] cursor-pointer"
+              className="hidden lg:flex font-medium bg-secondary-light text-secondary-dark py-2 px-4 md:py-2 md:px-4 lg:py-3 lg:px-8 rounded-[26px] cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg active:scale-95"
             >
               Download App
             </Typography>
           </button>
 
           {/* hamburger icon for mobile */}
-          <div className="flex md:hidden">
+          <div className="flex lg:hidden">
             <button onClick={() => setShowMenu(true)}>
               <RxHamburgerMenu className="text-white w-[2rem] h-[2rem]" />
             </button>

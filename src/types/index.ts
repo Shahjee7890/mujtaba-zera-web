@@ -1,3 +1,6 @@
+import type { FormikProps } from "formik";
+import type { Dispatch, SetStateAction } from "react";
+
 export interface CategoryData {
   heading: string;
   paragraph: string;
@@ -60,3 +63,32 @@ export interface InfoBannerLayoutProps {
   title?: string;
   image?: string;
 }
+
+export interface SubscribProps {
+  styling?: string;
+  email: string;
+}
+export interface SideBarProps {
+  showMenu: boolean;
+  setShowMenu: Dispatch<SetStateAction<boolean>>;
+}
+
+export interface FormProps {
+  title: string;
+  description: string;
+  buttonText: string;
+  isContactUs?: boolean;
+  formik?: FormikProps<ContactUsFormValues>;
+  formikRemoveAccount?: FormikProps<RemoveAccountFormValues>;
+}
+export interface Tab {
+  id: number;
+  title: string;
+}
+
+export interface TabsProps {
+  tabs: Tab[];
+  handleMenuClick: (id: number) => void;
+  activeMenu: number;
+}
+

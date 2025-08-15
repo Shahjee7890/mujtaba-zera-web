@@ -20,7 +20,7 @@ const HeroSection = () => {
       {/* child */}
       <div
         className="max-w-section flex justify-center items-center"
-        data-aos="zoom-in-up"
+        data-aos="fade-up"
         data-aos-duration="1000"
       >
         <div className="max-w-content flex flex-col lg:flex-row items-center justify-between gap-10 w-4/5 lg:w-[90%] xl:w-full">

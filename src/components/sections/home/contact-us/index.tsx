@@ -28,7 +28,7 @@ const ContactUs = () => {
     <section
       id="contact"
       className="w-full flex flex-col py-6 lg:pb-25"
-      data-aos="zoom-in-up"
+      data-aos="fade-up"
       data-aos-duration="3000"
     >
       <FormZera

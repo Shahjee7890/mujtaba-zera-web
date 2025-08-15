@@ -15,8 +15,8 @@ const SellOnMarketplace = () => {
     <section
       id="marketplace"
       className="w-full flex flex-col text-center items-center justify-center sm:px-5 lg:px-0 py-6 sm:py-24 md:py-10 xl:py-20 bg-off-white-color"
-      data-aos="zoom-in-up"
-      data-aos-duration="3000"
+      data-aos="fade-up"
+      data-aos-duration="2000"
     >
       {/* child */}
       <div className="justify-center items-center px-5 sm:px-0 w-full">

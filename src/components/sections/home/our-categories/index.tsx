@@ -23,8 +23,8 @@ const OurCategories = () => {
     <section
       id="categories"
       className="w-full flex flex-col justify-center items-center px-5 pt-8 sm:py-15 md:py-10 xl:py-30"
-        data-aos="zoom-in-up"
-        data-aos-duration="3000"
+        data-aos="fade-up"
+        data-aos-duration="2200"
     >
       {/* child */}
       <div

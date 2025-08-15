@@ -16,8 +16,8 @@ const Faqs = () => {
       {/* child */}
       <div
         className="max-w-section"
-        data-aos="zoom-in-up"
-        data-aos-duration="3000"
+        data-aos="fade-up"
+        data-aos-duration="2200"
       >
         <div className="max-w-content w-full flex flex-col lg:flex-row lg:justify-between gap-10 px-1 lg:px-0">
           {/* title */}

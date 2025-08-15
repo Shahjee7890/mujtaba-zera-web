@@ -12,8 +12,8 @@ const BuyOnMarketplace = () => {
   return (
     <section
       className="w-full flex flex-col gap-10 lg:gap-0 items-center justify-center lg:flex-row bg-gradient-primary py-10 lg:py-30 overflow-hidden"
-      data-aos="zoom-in-up"
-      data-aos-duration="3000"
+      data-aos="fade-up"
+      data-aos-duration="2200"
     >
       <div className="max-w-section">
         {/* content */}
